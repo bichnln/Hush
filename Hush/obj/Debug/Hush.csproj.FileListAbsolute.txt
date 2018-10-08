@@ -1,0 +1,15 @@
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\bin\Debug\HushDB.mdb
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\bin\Debug\Hush.exe.config
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\bin\Debug\Hush.exe
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\bin\Debug\Hush.pdb
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.csprojAssemblyReference.cache
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.AddNewAccForm.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.Form1.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.Properties.Resources.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.csproj.GenerateResource.cache
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.csproj.CoreCompileInputs.cache
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.exe
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.pdb
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.EditAccountInfoForm.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.ViewAccountForm.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.ChangePINForm.resources
