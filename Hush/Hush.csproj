@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -69,10 +84,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HushDBDataSet.Designer.cs">
+    <Compile Include=".Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HushDBDataSet.xsd</DependentUpon>
+      <DependentUpon>.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HushDatabaseDataSet.cs">
+      <DependentUpon>HushDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HushDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HushDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,16 +129,27 @@
     <EmbeddedResource Include="ViewAccountForm.resx">
       <DependentUpon>ViewAccountForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="HushDBDataSet.xsc">
-      <DependentUpon>HushDBDataSet.xsd</DependentUpon>
+    <None Include=".xsc">
+      <DependentUpon>.xsd</DependentUpon>
     </None>
-    <None Include="HushDBDataSet.xsd">
+    <None Include=".xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HushDBDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="HushDBDataSet.xss">
-      <DependentUpon>HushDBDataSet.xsd</DependentUpon>
+    <None Include=".xss">
+      <DependentUpon>.xsd</DependentUpon>
+    </None>
+    <None Include="HushDatabaseDataSet.xsc">
+      <DependentUpon>HushDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HushDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HushDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HushDatabaseDataSet.xss">
+      <DependentUpon>HushDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,9 +165,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HushDB.mdb">
+    <Content Include="HushDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="HushDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>HushDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="DontTouchThis.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

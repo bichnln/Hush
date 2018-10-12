@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.UsrnameTBox = new System.Windows.Forms.TextBox();
@@ -40,6 +41,11 @@
             this.PNumberTBox = new System.Windows.Forms.TextBox();
             this.ServiceLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
+            this.hushDatabaseDataSet = new Hush.HushDatabaseDataSet();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableTableAdapter = new Hush.HushDatabaseDataSetTableAdapters.TableTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.hushDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // CancelBtn
@@ -148,6 +154,20 @@
             this.UsernameLabel.Text = "Username";
             this.UsernameLabel.Click += new System.EventHandler(this.UsernameLabel_Click);
             // 
+            // hushDatabaseDataSet
+            // 
+            this.hushDatabaseDataSet.DataSetName = "HushDatabaseDataSet";
+            this.hushDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.hushDatabaseDataSet;
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
             // AddNewAccForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +187,9 @@
             this.Controls.Add(this.CancelBtn);
             this.Name = "AddNewAccForm";
             this.Text = "AddNewAccForm";
+            this.Load += new System.EventHandler(this.AddNewAccForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.hushDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +209,8 @@
         private System.Windows.Forms.TextBox PNumberTBox;
         private System.Windows.Forms.Label ServiceLabel;
         private System.Windows.Forms.Label UsernameLabel;
+        private HushDatabaseDataSet hushDatabaseDataSet;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private HushDatabaseDataSetTableAdapters.TableTableAdapter tableTableAdapter;
     }
 }
