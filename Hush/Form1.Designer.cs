@@ -44,6 +44,7 @@
             this.LockAppBtn = new System.Windows.Forms.Button();
             this.testEditForm = new System.Windows.Forms.Button();
             this.tableTableAdapter = new Hush.HushDatabaseDataSetTableAdapters.TableTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hushDatabaseDataSet)).BeginInit();
@@ -51,9 +52,9 @@
             // 
             // ShowAllBtn
             // 
-            this.ShowAllBtn.Location = new System.Drawing.Point(2, 48);
+            this.ShowAllBtn.Location = new System.Drawing.Point(25, 48);
             this.ShowAllBtn.Name = "ShowAllBtn";
-            this.ShowAllBtn.Size = new System.Drawing.Size(172, 81);
+            this.ShowAllBtn.Size = new System.Drawing.Size(121, 81);
             this.ShowAllBtn.TabIndex = 0;
             this.ShowAllBtn.Text = "Show All Accounts";
             this.ShowAllBtn.UseVisualStyleBackColor = true;
@@ -71,9 +72,9 @@
             this.emailDataGridViewTextBoxColumn,
             this.phoneNumberDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(180, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(152, 48);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(549, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 310);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -125,19 +126,19 @@
             // 
             // AddNewBtn
             // 
-            this.AddNewBtn.Location = new System.Drawing.Point(2, 124);
+            this.AddNewBtn.Location = new System.Drawing.Point(152, 364);
             this.AddNewBtn.Name = "AddNewBtn";
-            this.AddNewBtn.Size = new System.Drawing.Size(172, 81);
+            this.AddNewBtn.Size = new System.Drawing.Size(143, 40);
             this.AddNewBtn.TabIndex = 2;
-            this.AddNewBtn.Text = "Add new account";
+            this.AddNewBtn.Text = "Add";
             this.AddNewBtn.UseVisualStyleBackColor = true;
             this.AddNewBtn.Click += new System.EventHandler(this.AddNewBtn_Click);
             // 
             // ChangePINBtn
             // 
-            this.ChangePINBtn.Location = new System.Drawing.Point(2, 201);
+            this.ChangePINBtn.Location = new System.Drawing.Point(25, 135);
             this.ChangePINBtn.Name = "ChangePINBtn";
-            this.ChangePINBtn.Size = new System.Drawing.Size(172, 81);
+            this.ChangePINBtn.Size = new System.Drawing.Size(121, 81);
             this.ChangePINBtn.TabIndex = 3;
             this.ChangePINBtn.Text = "Change PIN Code";
             this.ChangePINBtn.UseVisualStyleBackColor = true;
@@ -145,9 +146,9 @@
             // 
             // LockAppBtn
             // 
-            this.LockAppBtn.Location = new System.Drawing.Point(2, 277);
+            this.LockAppBtn.Location = new System.Drawing.Point(25, 222);
             this.LockAppBtn.Name = "LockAppBtn";
-            this.LockAppBtn.Size = new System.Drawing.Size(172, 81);
+            this.LockAppBtn.Size = new System.Drawing.Size(121, 81);
             this.LockAppBtn.TabIndex = 4;
             this.LockAppBtn.Text = "Lock App";
             this.LockAppBtn.UseVisualStyleBackColor = true;
@@ -155,11 +156,11 @@
             // 
             // testEditForm
             // 
-            this.testEditForm.Location = new System.Drawing.Point(189, 379);
+            this.testEditForm.Location = new System.Drawing.Point(301, 364);
             this.testEditForm.Name = "testEditForm";
-            this.testEditForm.Size = new System.Drawing.Size(172, 50);
+            this.testEditForm.Size = new System.Drawing.Size(143, 40);
             this.testEditForm.TabIndex = 5;
-            this.testEditForm.Text = "test Edit Form";
+            this.testEditForm.Text = "Update";
             this.testEditForm.UseVisualStyleBackColor = true;
             this.testEditForm.Click += new System.EventHandler(this.testEditForm_Click);
             // 
@@ -167,11 +168,22 @@
             // 
             this.tableTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(450, 364);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 40);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.deletebutton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.testEditForm);
             this.Controls.Add(this.LockAppBtn);
             this.Controls.Add(this.ChangePINBtn);
@@ -180,6 +192,7 @@
             this.Controls.Add(this.ShowAllBtn);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.TransparencyKey = System.Drawing.Color.DarkRed;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
@@ -205,6 +218,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn serviceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

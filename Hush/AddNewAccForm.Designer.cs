@@ -50,7 +50,7 @@
             // 
             // CancelBtn
             // 
-            this.CancelBtn.Location = new System.Drawing.Point(380, 360);
+            this.CancelBtn.Location = new System.Drawing.Point(267, 263);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(75, 23);
             this.CancelBtn.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(264, 360);
+            this.SaveBtn.Location = new System.Drawing.Point(151, 263);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(75, 23);
             this.SaveBtn.TabIndex = 1;
@@ -70,16 +70,16 @@
             // 
             // UsrnameTBox
             // 
-            this.UsrnameTBox.Location = new System.Drawing.Point(169, 116);
+            this.UsrnameTBox.Location = new System.Drawing.Point(146, 66);
             this.UsrnameTBox.Name = "UsrnameTBox";
-            this.UsrnameTBox.Size = new System.Drawing.Size(286, 20);
+            this.UsrnameTBox.Size = new System.Drawing.Size(196, 20);
             this.UsrnameTBox.TabIndex = 3;
             this.UsrnameTBox.TextChanged += new System.EventHandler(this.UsrnameTBox_TextChanged);
             // 
             // PasswrdLabel
             // 
             this.PasswrdLabel.AutoSize = true;
-            this.PasswrdLabel.Location = new System.Drawing.Point(89, 165);
+            this.PasswrdLabel.Location = new System.Drawing.Point(66, 115);
             this.PasswrdLabel.Name = "PasswrdLabel";
             this.PasswrdLabel.Size = new System.Drawing.Size(53, 13);
             this.PasswrdLabel.TabIndex = 4;
@@ -89,17 +89,17 @@
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Location = new System.Drawing.Point(37, 244);
+            this.EmailLabel.Location = new System.Drawing.Point(14, 194);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(107, 13);
+            this.EmailLabel.Size = new System.Drawing.Size(97, 13);
             this.EmailLabel.TabIndex = 6;
-            this.EmailLabel.Text = "Email used to register";
+            this.EmailLabel.Text = "Email Registeration";
             this.EmailLabel.Click += new System.EventHandler(this.EmailLabel_Click);
             // 
             // PNumberLabel
             // 
             this.PNumberLabel.AutoSize = true;
-            this.PNumberLabel.Location = new System.Drawing.Point(63, 280);
+            this.PNumberLabel.Location = new System.Drawing.Point(40, 230);
             this.PNumberLabel.Name = "PNumberLabel";
             this.PNumberLabel.Size = new System.Drawing.Size(81, 13);
             this.PNumberLabel.TabIndex = 7;
@@ -108,36 +108,36 @@
             // 
             // PasswrdTBox
             // 
-            this.PasswrdTBox.Location = new System.Drawing.Point(169, 165);
+            this.PasswrdTBox.Location = new System.Drawing.Point(146, 108);
             this.PasswrdTBox.Name = "PasswrdTBox";
-            this.PasswrdTBox.Size = new System.Drawing.Size(286, 20);
+            this.PasswrdTBox.Size = new System.Drawing.Size(196, 20);
             this.PasswrdTBox.TabIndex = 8;
             // 
             // ServiceTBox
             // 
-            this.ServiceTBox.Location = new System.Drawing.Point(169, 205);
+            this.ServiceTBox.Location = new System.Drawing.Point(146, 151);
             this.ServiceTBox.Name = "ServiceTBox";
-            this.ServiceTBox.Size = new System.Drawing.Size(286, 20);
+            this.ServiceTBox.Size = new System.Drawing.Size(196, 20);
             this.ServiceTBox.TabIndex = 9;
             // 
             // EmailTBox
             // 
-            this.EmailTBox.Location = new System.Drawing.Point(169, 244);
+            this.EmailTBox.Location = new System.Drawing.Point(146, 187);
             this.EmailTBox.Name = "EmailTBox";
-            this.EmailTBox.Size = new System.Drawing.Size(286, 20);
+            this.EmailTBox.Size = new System.Drawing.Size(196, 20);
             this.EmailTBox.TabIndex = 10;
             // 
             // PNumberTBox
             // 
-            this.PNumberTBox.Location = new System.Drawing.Point(169, 280);
+            this.PNumberTBox.Location = new System.Drawing.Point(146, 223);
             this.PNumberTBox.Name = "PNumberTBox";
-            this.PNumberTBox.Size = new System.Drawing.Size(286, 20);
+            this.PNumberTBox.Size = new System.Drawing.Size(196, 20);
             this.PNumberTBox.TabIndex = 11;
             // 
             // ServiceLabel
             // 
             this.ServiceLabel.AutoSize = true;
-            this.ServiceLabel.Location = new System.Drawing.Point(99, 208);
+            this.ServiceLabel.Location = new System.Drawing.Point(76, 158);
             this.ServiceLabel.Name = "ServiceLabel";
             this.ServiceLabel.Size = new System.Drawing.Size(43, 13);
             this.ServiceLabel.TabIndex = 12;
@@ -147,7 +147,7 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Location = new System.Drawing.Point(89, 119);
+            this.UsernameLabel.Location = new System.Drawing.Point(66, 69);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(55, 13);
             this.UsernameLabel.TabIndex = 13;
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 433);
+            this.ClientSize = new System.Drawing.Size(418, 335);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.ServiceLabel);
             this.Controls.Add(this.PNumberTBox);

@@ -125,5 +125,31 @@ namespace Hush
         {
 
         }
+
+        private void deletebutton1_Click(object sender, EventArgs e)
+        {
+            //check for comfirmation
+            if(MessageBox.Show("Are you sure?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Violet\Documents\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                if (dataGridView1.Rows.Count > 1 && dataGridView1.SelectedRows[0].Index != dataGridView1.Rows.Count - 1)
+                {
+                    //The row of where the user clicks will be deleted from the database.
+                    cmd.CommandText = ("DELETE FROM [Table] WHERE Id = " + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "");
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    //The row of where the user clicks will be deleted from datagridview.
+                    dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                    MessageBox.Show("Deleted successfully...");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Deletion has been cancelled.", "Deletion Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
