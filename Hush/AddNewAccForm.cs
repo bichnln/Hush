@@ -66,7 +66,7 @@ namespace Hush
             }
             if (_service.Length == 0)
             {
-                msg += "Please enter Service! \n";
+                msg += "Please enter Service!\n";
             }
             if (IsValidEmail(_email) == false)
             {
