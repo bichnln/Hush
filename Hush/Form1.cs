@@ -143,7 +143,7 @@ namespace Hush
                     con.Close();
                     //The row of where the user clicks will be deleted from datagridview.
                     dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-                    MessageBox.Show("Deleted successfully...");
+                    MessageBox.Show("Deleted successfully.");
                 }
             }
             else
