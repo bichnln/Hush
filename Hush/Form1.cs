@@ -71,7 +71,7 @@ namespace Hush
 
         private void LockAppBtn_Click(object sender, EventArgs e)
         {
-			this.Hide();
+            this.Hide();
             Login login = new Login();
             login.Show();
         }

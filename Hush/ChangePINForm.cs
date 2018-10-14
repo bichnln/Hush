@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Hush
 {
@@ -21,6 +22,51 @@ namespace Hush
         {
             this.Close();
 
+        }
+
+        private void RetypePassLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            if ((PassTextBox.Text == "") || (RetypePassTextBox.Text == ""))
+            {
+                MessageBox.Show("Please enter new password!\n");
+            }
+            else
+            {
+                if (PassTextBox.Text != RetypePassTextBox.Text)
+                {
+                    MessageBox.Show("Retyped password does not match!\n");
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\HushDatabase.mdf;Integrated Security=True");
+                    SqlDataAdapter adt = new SqlDataAdapter("SELECT COUNT(*) FROM [PASSWORD] WHERE Password = '" + OldPassTextBox.Text + "'", con);
+                    DataTable data = new DataTable();
+                    adt.Fill(data);
+                    if (data.Rows[0][0].ToString() == "0")
+                    {
+                        MessageBox.Show("Wrong password!\n");
+                    }
+                    else
+                    {
+                        SqlCommand cmd = new SqlCommand("UPDATE [PASSWORD] SET Password = '" + PassTextBox.Text + "' WHERE Password = '" + OldPassTextBox.Text + "'");
+
+                        cmd.Connection = con;
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+
+                        MessageBox.Show("Password was successfully changed.\n");
+                        this.Hide();
+                        Form1 form1 = new Form1();
+                        form1.Show();
+                    }
+                }
+            }
         }
     }
 }
