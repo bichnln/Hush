@@ -52,17 +52,25 @@
             // 
             // ShowAllBtn
             // 
+            this.ShowAllBtn.BackColor = System.Drawing.SystemColors.Menu;
+            this.ShowAllBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ShowAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ShowAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowAllBtn.ForeColor = System.Drawing.Color.Black;
             this.ShowAllBtn.Location = new System.Drawing.Point(25, 48);
             this.ShowAllBtn.Name = "ShowAllBtn";
             this.ShowAllBtn.Size = new System.Drawing.Size(121, 81);
             this.ShowAllBtn.TabIndex = 0;
             this.ShowAllBtn.Text = "Show All Accounts";
-            this.ShowAllBtn.UseVisualStyleBackColor = true;
+            this.ShowAllBtn.UseVisualStyleBackColor = false;
             this.ShowAllBtn.Click += new System.EventHandler(this.ShowAllBtn_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -101,6 +109,7 @@
             this.serviceDataGridViewTextBoxColumn.DataPropertyName = "Service";
             this.serviceDataGridViewTextBoxColumn.HeaderText = "Service";
             this.serviceDataGridViewTextBoxColumn.Name = "serviceDataGridViewTextBoxColumn";
+            this.serviceDataGridViewTextBoxColumn.Width = 101;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -182,6 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(831, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.testEditForm);
@@ -190,9 +200,12 @@
             this.Controls.Add(this.AddNewBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ShowAllBtn);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.TransparencyKey = System.Drawing.Color.DarkRed;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hush";
+            this.TransparencyKey = System.Drawing.Color.White;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
