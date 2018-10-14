@@ -63,56 +63,6 @@ namespace Hush.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _22929 {
-            get {
-                object obj = ResourceManager.GetObject("22929", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _26804538_1884122045047853_696651987910532846_n {
-            get {
-                object obj = ResourceManager.GetObject("26804538_1884122045047853_696651987910532846_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _768_light_gray_gradient_2560x1600_abstract_wallpaper {
-            get {
-                object obj = ResourceManager.GetObject("768-light-gray-gradient-2560x1600-abstract-wallpaper", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap background_ground_images_back {
-            get {
-                object obj = ResourceManager.GetObject("background-ground-images-back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gradient_gray_201 {
-            get {
-                object obj = ResourceManager.GetObject("gradient-gray-201", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ws_Minimal_Gray_to_White_Gradient_1920x1200 {
             get {
                 object obj = ResourceManager.GetObject("ws_Minimal_Gray_to_White_Gradient_1920x1200", resourceCulture);
