@@ -86,6 +86,7 @@
             this.PNumberTBox.Name = "PNumberTBox";
             this.PNumberTBox.Size = new System.Drawing.Size(286, 20);
             this.PNumberTBox.TabIndex = 21;
+            this.PNumberTBox.TextChanged += new System.EventHandler(this.PNumberTBox_TextChanged);
             // 
             // EmailTBox
             // 
@@ -111,6 +112,7 @@
             this.PasswrdTBox.Name = "PasswrdTBox";
             this.PasswrdTBox.Size = new System.Drawing.Size(286, 20);
             this.PasswrdTBox.TabIndex = 18;
+            this.PasswrdTBox.TextChanged += new System.EventHandler(this.PasswrdTBox_TextChanged);
             // 
             // PNumberLabel
             // 

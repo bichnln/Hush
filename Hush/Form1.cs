@@ -48,7 +48,7 @@ namespace Hush
             if (f.DialogResult == DialogResult.OK)
             {
                 //create a new connection to database
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\HushDatabase.mdf;Integrated Security=True");
 
                 //calculate the ID for the record to be saved
                 int nextID = tableBindingSource.Count + 1;
@@ -66,9 +66,7 @@ namespace Hush
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-            }
-
-            
+            }   
         }
 
         private void LockAppBtn_Click(object sender, EventArgs e)
@@ -78,8 +76,42 @@ namespace Hush
 
         private void testEditForm_Click(object sender, EventArgs e)
         {
-            EditAccountInfoForm f = new EditAccountInfoForm();
-            f.Show();
+            Prompt promptingForm = new Prompt();
+            promptingForm.ShowDialog();
+
+            if (promptingForm.DialogResult == DialogResult.OK)
+            {
+                EditAccountInfoForm editingForm = new EditAccountInfoForm();
+                editingForm.ShowDialog();
+
+                if (editingForm.DialogResult == DialogResult.OK)
+                {
+                    //create a new connection to database
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\HushDatabase.mdf;Integrated Security=True");
+
+                    //INSERT SQL Command, used to insert data to database
+                    SqlCommand cmd;
+                    if (editingForm.NewPhoneNo == "")
+                    {
+                        cmd = new SqlCommand("UPDATE [TABLE] SET Password = '" + editingForm.NewPass + "' WHERE Id = '" + promptingForm.ID + "'");
+                    }
+                    else
+                    {
+                        cmd = new SqlCommand("UPDATE [TABLE] SET Password = '" + editingForm.NewPass + "', PhoneNumber = '" + editingForm.NewPhoneNo + "' WHERE Id = '" + promptingForm.ID + "'");
+                    }
+
+                    cmd.Connection = con;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    //update the table displayed in dataGridView
+                    SqlDataAdapter adapter = new SqlDataAdapter(@"SELECT * FROM [Table]", con);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
