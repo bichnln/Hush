@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ShowAllBtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,21 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hushDatabaseDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ShowAllBtn
-            // 
-            this.ShowAllBtn.BackColor = System.Drawing.SystemColors.Menu;
-            this.ShowAllBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ShowAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ShowAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowAllBtn.ForeColor = System.Drawing.Color.Black;
-            this.ShowAllBtn.Location = new System.Drawing.Point(25, 48);
-            this.ShowAllBtn.Name = "ShowAllBtn";
-            this.ShowAllBtn.Size = new System.Drawing.Size(121, 81);
-            this.ShowAllBtn.TabIndex = 0;
-            this.ShowAllBtn.Text = "Show All Accounts";
-            this.ShowAllBtn.UseVisualStyleBackColor = false;
-            this.ShowAllBtn.Click += new System.EventHandler(this.ShowAllBtn_Click);
             // 
             // dataGridView1
             // 
@@ -135,42 +120,54 @@
             // 
             // AddNewBtn
             // 
+            this.AddNewBtn.BackColor = System.Drawing.Color.Lavender;
+            this.AddNewBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.AddNewBtn.Location = new System.Drawing.Point(152, 364);
             this.AddNewBtn.Name = "AddNewBtn";
             this.AddNewBtn.Size = new System.Drawing.Size(143, 40);
             this.AddNewBtn.TabIndex = 2;
             this.AddNewBtn.Text = "Add";
-            this.AddNewBtn.UseVisualStyleBackColor = true;
+            this.AddNewBtn.UseVisualStyleBackColor = false;
             this.AddNewBtn.Click += new System.EventHandler(this.AddNewBtn_Click);
             // 
             // ChangePINBtn
             // 
-            this.ChangePINBtn.Location = new System.Drawing.Point(25, 135);
+            this.ChangePINBtn.BackColor = System.Drawing.Color.Lavender;
+            this.ChangePINBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePINBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ChangePINBtn.Location = new System.Drawing.Point(25, 48);
             this.ChangePINBtn.Name = "ChangePINBtn";
             this.ChangePINBtn.Size = new System.Drawing.Size(121, 81);
             this.ChangePINBtn.TabIndex = 3;
-            this.ChangePINBtn.Text = "Change PIN Code";
-            this.ChangePINBtn.UseVisualStyleBackColor = true;
+            this.ChangePINBtn.Text = "Change PIN";
+            this.ChangePINBtn.UseVisualStyleBackColor = false;
             this.ChangePINBtn.Click += new System.EventHandler(this.ChangePINBtn_Click);
             // 
             // LockAppBtn
             // 
-            this.LockAppBtn.Location = new System.Drawing.Point(25, 222);
+            this.LockAppBtn.BackColor = System.Drawing.Color.Lavender;
+            this.LockAppBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LockAppBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.LockAppBtn.Location = new System.Drawing.Point(25, 135);
             this.LockAppBtn.Name = "LockAppBtn";
             this.LockAppBtn.Size = new System.Drawing.Size(121, 81);
             this.LockAppBtn.TabIndex = 4;
             this.LockAppBtn.Text = "Lock App";
-            this.LockAppBtn.UseVisualStyleBackColor = true;
+            this.LockAppBtn.UseVisualStyleBackColor = false;
             this.LockAppBtn.Click += new System.EventHandler(this.LockAppBtn_Click);
             // 
             // testEditForm
             // 
+            this.testEditForm.BackColor = System.Drawing.Color.Lavender;
+            this.testEditForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testEditForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.testEditForm.Location = new System.Drawing.Point(301, 364);
             this.testEditForm.Name = "testEditForm";
             this.testEditForm.Size = new System.Drawing.Size(143, 40);
             this.testEditForm.TabIndex = 5;
             this.testEditForm.Text = "Update";
-            this.testEditForm.UseVisualStyleBackColor = true;
+            this.testEditForm.UseVisualStyleBackColor = false;
             this.testEditForm.Click += new System.EventHandler(this.testEditForm_Click);
             // 
             // tableTableAdapter
@@ -179,12 +176,15 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Lavender;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button1.Location = new System.Drawing.Point(450, 364);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 40);
             this.button1.TabIndex = 6;
             this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.deletebutton1_Click);
             // 
             // Form1
@@ -193,6 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Hush.Properties.Resources.ws_Minimal_Gray_to_White_Gradient_1920x1200;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(831, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -200,9 +201,9 @@
             this.Controls.Add(this.LockAppBtn);
             this.Controls.Add(this.ChangePINBtn);
             this.Controls.Add(this.AddNewBtn);
-            this.Controls.Add(this.ShowAllBtn);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hush";
@@ -216,8 +217,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ShowAllBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AddNewBtn;
         private System.Windows.Forms.Button ChangePINBtn;

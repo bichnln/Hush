@@ -68,5 +68,10 @@ namespace Hush
         {
             DialogResult = DialogResult.Cancel;
         }
+
+        private void IDLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

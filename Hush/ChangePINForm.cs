@@ -43,7 +43,7 @@ namespace Hush
                 }
                 else
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\HushDatabase.mdf;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Violet\Documents\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
                     SqlDataAdapter adt = new SqlDataAdapter("SELECT COUNT(*) FROM [PASSWORD] WHERE Password = '" + OldPassTextBox.Text + "'", con);
                     DataTable data = new DataTable();
                     adt.Fill(data);
@@ -62,8 +62,6 @@ namespace Hush
 
                         MessageBox.Show("Password was successfully changed.\n");
                         this.Hide();
-                        Form1 form1 = new Form1();
-                        form1.Show();
                     }
                 }
             }

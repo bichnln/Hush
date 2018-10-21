@@ -28,25 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.WelcomeLabel = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LoginButton = new System.Windows.Forms.Button();
             this.PassTextBox = new System.Windows.Forms.TextBox();
             this.PassLabel = new System.Windows.Forms.Label();
             this.QuitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // WelcomeLabel
-            // 
-            this.WelcomeLabel.AutoSize = true;
-            this.WelcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeLabel.Location = new System.Drawing.Point(110, 44);
-            this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(270, 37);
-            this.WelcomeLabel.TabIndex = 0;
-            this.WelcomeLabel.Text = "Welcome to Hush";
-            // 
             // LoginButton
             // 
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.LoginButton.Location = new System.Drawing.Point(138, 208);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(86, 33);
@@ -68,15 +60,19 @@
             // PassLabel
             // 
             this.PassLabel.AutoSize = true;
-            this.PassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PassLabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.PassLabel.Location = new System.Drawing.Point(102, 126);
             this.PassLabel.Name = "PassLabel";
-            this.PassLabel.Size = new System.Drawing.Size(299, 24);
+            this.PassLabel.Size = new System.Drawing.Size(291, 26);
             this.PassLabel.TabIndex = 3;
             this.PassLabel.Text = "Please enter password to continue";
             // 
             // QuitButton
             // 
+            this.QuitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.QuitButton.Location = new System.Drawing.Point(263, 208);
             this.QuitButton.Name = "QuitButton";
             this.QuitButton.Size = new System.Drawing.Size(86, 33);
@@ -89,12 +85,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Hush.Properties.Resources.hush;
             this.ClientSize = new System.Drawing.Size(504, 299);
             this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.PassLabel);
             this.Controls.Add(this.PassTextBox);
             this.Controls.Add(this.LoginButton);
-            this.Controls.Add(this.WelcomeLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Hush";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -104,8 +101,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label WelcomeLabel;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.TextBox PassTextBox;
         private System.Windows.Forms.Label PassLabel;

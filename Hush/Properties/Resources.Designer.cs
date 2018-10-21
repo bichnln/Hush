@@ -63,6 +63,16 @@ namespace Hush.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hush {
+            get {
+                object obj = ResourceManager.GetObject("hush", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ws_Minimal_Gray_to_White_Gradient_1920x1200 {
             get {
                 object obj = ResourceManager.GetObject("ws_Minimal_Gray_to_White_Gradient_1920x1200", resourceCulture);

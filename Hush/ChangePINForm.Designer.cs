@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePINForm));
             this.OldPassLabel = new System.Windows.Forms.Label();
             this.PassLabel = new System.Windows.Forms.Label();
             this.PassTextBox = new System.Windows.Forms.TextBox();
@@ -41,73 +42,88 @@
             // OldPassLabel
             // 
             this.OldPassLabel.AutoSize = true;
-            this.OldPassLabel.Location = new System.Drawing.Point(12, 71);
+            this.OldPassLabel.BackColor = System.Drawing.Color.Transparent;
+            this.OldPassLabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OldPassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.OldPassLabel.Location = new System.Drawing.Point(41, 55);
             this.OldPassLabel.Name = "OldPassLabel";
-            this.OldPassLabel.Size = new System.Drawing.Size(72, 13);
+            this.OldPassLabel.Size = new System.Drawing.Size(106, 17);
             this.OldPassLabel.TabIndex = 0;
-            this.OldPassLabel.Text = "Old Password";
+            this.OldPassLabel.Text = "Current Password";
             // 
             // PassLabel
             // 
             this.PassLabel.AutoSize = true;
-            this.PassLabel.Location = new System.Drawing.Point(12, 120);
+            this.PassLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PassLabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.PassLabel.Location = new System.Drawing.Point(59, 92);
             this.PassLabel.Name = "PassLabel";
-            this.PassLabel.Size = new System.Drawing.Size(78, 13);
+            this.PassLabel.Size = new System.Drawing.Size(88, 17);
             this.PassLabel.TabIndex = 1;
             this.PassLabel.Text = "New Password";
             // 
             // PassTextBox
             // 
-            this.PassTextBox.Location = new System.Drawing.Point(160, 120);
+            this.PassTextBox.Location = new System.Drawing.Point(155, 91);
             this.PassTextBox.Name = "PassTextBox";
-            this.PassTextBox.Size = new System.Drawing.Size(240, 20);
+            this.PassTextBox.Size = new System.Drawing.Size(161, 20);
             this.PassTextBox.TabIndex = 20;
             this.PassTextBox.UseSystemPasswordChar = true;
             // 
             // OldPassTextBox
             // 
             this.OldPassTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.OldPassTextBox.Location = new System.Drawing.Point(160, 71);
+            this.OldPassTextBox.Location = new System.Drawing.Point(155, 54);
             this.OldPassTextBox.Name = "OldPassTextBox";
-            this.OldPassTextBox.Size = new System.Drawing.Size(240, 20);
+            this.OldPassTextBox.Size = new System.Drawing.Size(161, 20);
             this.OldPassTextBox.TabIndex = 19;
             this.OldPassTextBox.UseSystemPasswordChar = true;
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(210, 209);
+            this.SaveBtn.BackColor = System.Drawing.Color.Lavender;
+            this.SaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.SaveBtn.Location = new System.Drawing.Point(155, 166);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(75, 23);
+            this.SaveBtn.Size = new System.Drawing.Size(68, 23);
             this.SaveBtn.TabIndex = 22;
             this.SaveBtn.Text = "Save";
-            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.UseVisualStyleBackColor = false;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // CancelBtn
             // 
-            this.CancelBtn.Location = new System.Drawing.Point(325, 209);
+            this.CancelBtn.BackColor = System.Drawing.Color.Lavender;
+            this.CancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.CancelBtn.Location = new System.Drawing.Point(248, 166);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.CancelBtn.Size = new System.Drawing.Size(68, 23);
             this.CancelBtn.TabIndex = 21;
             this.CancelBtn.Text = "Cancel";
-            this.CancelBtn.UseVisualStyleBackColor = true;
+            this.CancelBtn.UseVisualStyleBackColor = false;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // RetypePassLabel
             // 
             this.RetypePassLabel.AutoSize = true;
-            this.RetypePassLabel.Location = new System.Drawing.Point(12, 170);
+            this.RetypePassLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RetypePassLabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetypePassLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.RetypePassLabel.Location = new System.Drawing.Point(38, 128);
             this.RetypePassLabel.Name = "RetypePassLabel";
-            this.RetypePassLabel.Size = new System.Drawing.Size(115, 13);
+            this.RetypePassLabel.Size = new System.Drawing.Size(109, 17);
             this.RetypePassLabel.TabIndex = 23;
-            this.RetypePassLabel.Text = "Retype New Password";
+            this.RetypePassLabel.Text = "Confirm Password";
             this.RetypePassLabel.Click += new System.EventHandler(this.RetypePassLabel_Click);
             // 
             // RetypePassTextBox
             // 
-            this.RetypePassTextBox.Location = new System.Drawing.Point(160, 167);
+            this.RetypePassTextBox.Location = new System.Drawing.Point(155, 127);
             this.RetypePassTextBox.Name = "RetypePassTextBox";
-            this.RetypePassTextBox.Size = new System.Drawing.Size(240, 20);
+            this.RetypePassTextBox.Size = new System.Drawing.Size(161, 20);
             this.RetypePassTextBox.TabIndex = 24;
             this.RetypePassTextBox.UseSystemPasswordChar = true;
             // 
@@ -115,7 +131,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 299);
+            this.BackgroundImage = global::Hush.Properties.Resources.ws_Minimal_Gray_to_White_Gradient_1920x1200;
+            this.ClientSize = new System.Drawing.Size(369, 222);
             this.Controls.Add(this.RetypePassTextBox);
             this.Controls.Add(this.RetypePassLabel);
             this.Controls.Add(this.SaveBtn);
@@ -124,6 +141,7 @@
             this.Controls.Add(this.OldPassTextBox);
             this.Controls.Add(this.PassLabel);
             this.Controls.Add(this.OldPassLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChangePINForm";
             this.Text = "ChangePINForm";
             this.ResumeLayout(false);

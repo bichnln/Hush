@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prompt));
             this.IDLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.IDTextBox = new System.Windows.Forms.TextBox();
@@ -37,25 +38,32 @@
             // IDLabel
             // 
             this.IDLabel.AutoSize = true;
-            this.IDLabel.Location = new System.Drawing.Point(19, 67);
+            this.IDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IDLabel.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.IDLabel.Location = new System.Drawing.Point(46, 50);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(259, 13);
+            this.IDLabel.Size = new System.Drawing.Size(241, 21);
             this.IDLabel.TabIndex = 0;
-            this.IDLabel.Text = "Enter the ID of the account that you would like to edit";
+            this.IDLabel.Text = "Enter the ID of an account to edit\r\n";
+            this.IDLabel.Click += new System.EventHandler(this.IDLabel_Click);
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(52, 133);
+            this.NextButton.BackColor = System.Drawing.Color.Lavender;
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.NextButton.Location = new System.Drawing.Point(78, 118);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(86, 30);
             this.NextButton.TabIndex = 1;
             this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // IDTextBox
             // 
-            this.IDTextBox.Location = new System.Drawing.Point(77, 98);
+            this.IDTextBox.Location = new System.Drawing.Point(89, 83);
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.Size = new System.Drawing.Size(155, 20);
             this.IDTextBox.TabIndex = 2;
@@ -63,12 +71,15 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(163, 133);
+            this.Cancel.BackColor = System.Drawing.Color.Lavender;
+            this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Cancel.Location = new System.Drawing.Point(172, 118);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(86, 30);
             this.Cancel.TabIndex = 3;
             this.Cancel.Text = "Cancel";
-            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.UseVisualStyleBackColor = false;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // Prompt
@@ -76,12 +87,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(309, 215);
+            this.BackgroundImage = global::Hush.Properties.Resources.ws_Minimal_Gray_to_White_Gradient_1920x1200;
+            this.ClientSize = new System.Drawing.Size(339, 194);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.IDTextBox);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.IDLabel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Prompt";
             this.Text = "Prompt";
             this.ResumeLayout(false);
