@@ -194,6 +194,7 @@
     <Content Include="DontTouchThis.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\hush.jpg" />
     <None Include="Resources\ws_Minimal_Gray_to_White_Gradient_1920x1200.jpg" />
   </ItemGroup>
   <ItemGroup>
