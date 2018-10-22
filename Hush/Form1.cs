@@ -16,15 +16,15 @@ namespace Hush
         public Form1()
         {
             InitializeComponent();
-            
-            
+            this.dataGridView1.Columns[2].DefaultCellStyle.ForeColor = Color.White;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hushDatabaseDataSet.Table' table. You can move, or remove it, as needed.
             this.tableTableAdapter.Fill(this.hushDatabaseDataSet.Table);
-           
+            this.dataGridView1.Columns[2].DefaultCellStyle.ForeColor = Color.White;
         }
 
         private void ShowAllBtn_Click(object sender, EventArgs e)
@@ -45,25 +45,29 @@ namespace Hush
 
             if (f.DialogResult == DialogResult.OK)
             {
-                    //create a new connection to database
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+                //create a new connection to database
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
 
-                    //calculate the ID for the record to be saved
-                    int nextID = dataGridView1.RowCount + 1;
+                //calculate the ID for the new record
+                int nextID;
+                SqlCommand MaxIDCommand = new SqlCommand("SELECT MAX(Id) FROM [Table]", con);
+                con.Open();
+                nextID = Convert.ToInt16(MaxIDCommand.ExecuteScalar()) + 1;
+                con.Close();
 
-                    //INSERT SQL Command, used to insert data to database
-                    SqlCommand cmd = new SqlCommand("INSERT INTO [Table] VALUES ('" + nextID + "','" + f.Username + "','" + f.Password + "','" + f.Service + "','" + f.Email + "','" + f.PhoneNumber + "')");
+                //INSERT SQL Command, used to insert data to database
+                SqlCommand cmd = new SqlCommand("INSERT INTO [Table] VALUES ('" + nextID + "','" + f.Username + "','" + f.Password + "','" + f.Service + "','" + f.Email + "','" + f.PhoneNumber + "')");
 
-                    cmd.Connection = con;
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                cmd.Connection = con;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
 
-                    //update the table displayed in dataGridView
-                    SqlDataAdapter adapter = new SqlDataAdapter(@"SELECT * FROM [Table]", con);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    dataGridView1.DataSource = dt;           
+                //update the table displayed in dataGridView
+                SqlDataAdapter adapter = new SqlDataAdapter(@"SELECT * FROM [Table]", con);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;           
                 
             }   
         }
