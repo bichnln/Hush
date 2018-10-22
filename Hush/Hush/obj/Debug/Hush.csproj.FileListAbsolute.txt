@@ -1,0 +1,70 @@
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\bin\Debug\HushDB.mdb
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\bin\Debug\Hush.exe.config
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\bin\Debug\Hush.exe
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\bin\Debug\Hush.pdb
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.csprojAssemblyReference.cache
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.AddNewAccForm.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.Form1.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.Properties.Resources.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.csproj.GenerateResource.cache
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.csproj.CoreCompileInputs.cache
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.exe
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.pdb
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.EditAccountInfoForm.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.ViewAccountForm.resources
+C:\Users\SAPPHIRE\DP1\HD Project\Hush\Hush\Hush\obj\Debug\Hush.ChangePINForm.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\bin\Debug\Hush.exe.config
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\bin\Debug\Hush.exe
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\bin\Debug\Hush.pdb
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.csprojAssemblyReference.cache
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.AddNewAccForm.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.ChangePINForm.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.EditAccountInfoForm.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.Form1.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.Properties.Resources.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.ViewAccountForm.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.csproj.GenerateResource.cache
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.csproj.CoreCompileInputs.cache
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.exe
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.pdb
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\bin\Debug\HushDatabase.mdf
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\bin\Debug\HushDatabase_log.ldf
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\bin\Debug\DontTouchThis.mdb
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\bin\Debug\HushDatabase.mdf
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\bin\Debug\HushDatabase_log.ldf
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\bin\Debug\DontTouchThis.mdb
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\bin\Debug\Hush.exe.config
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\bin\Debug\Hush.exe
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\bin\Debug\Hush.pdb
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.csprojAssemblyReference.cache
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.AddNewAccForm.resources
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.ChangePINForm.resources
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.EditAccountInfoForm.resources
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.Form1.resources
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.Properties.Resources.resources
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.ViewAccountForm.resources
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.csproj.GenerateResource.cache
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.csproj.CoreCompileInputs.cache
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.exe
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.pdb
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.Prompt.resources
+C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\obj\Debug\Hush.Login.resources
+C:\Users\Violet\Documents\Hush\Hush\bin\Debug\HushDatabase.mdf
+C:\Users\Violet\Documents\Hush\Hush\bin\Debug\HushDatabase_log.ldf
+C:\Users\Violet\Documents\Hush\Hush\bin\Debug\DontTouchThis.mdb
+C:\Users\Violet\Documents\Hush\Hush\bin\Debug\Hush.exe.config
+C:\Users\Violet\Documents\Hush\Hush\bin\Debug\Hush.exe
+C:\Users\Violet\Documents\Hush\Hush\bin\Debug\Hush.pdb
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.csprojAssemblyReference.cache
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.AddNewAccForm.resources
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.ChangePINForm.resources
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.EditAccountInfoForm.resources
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.Form1.resources
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.Login.resources
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.Prompt.resources
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.Properties.Resources.resources
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.ViewAccountForm.resources
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.csproj.GenerateResource.cache
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.csproj.CoreCompileInputs.cache
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.exe
+C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.pdb
