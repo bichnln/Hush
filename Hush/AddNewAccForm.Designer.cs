@@ -45,12 +45,6 @@
             this.hushDatabaseDataSet = new Hush.HushDatabaseDataSet();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter = new Hush.HushDatabaseDataSetTableAdapters.TableTableAdapter();
-            this.UsernameWarningLabel = new System.Windows.Forms.Label();
-            this.UsernameWarningText = new System.Windows.Forms.Label();
-            this.ClickToSeePassword = new System.Windows.Forms.Label();
-            this.ServiceWarningText = new System.Windows.Forms.Label();
-            this.EmailWarningText = new System.Windows.Forms.Label();
-            this.PNumberWarningText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hushDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -82,14 +76,10 @@
             // UsrnameTBox
             // 
             this.UsrnameTBox.Location = new System.Drawing.Point(146, 66);
-            this.UsrnameTBox.MaxLength = 50;
             this.UsrnameTBox.Name = "UsrnameTBox";
             this.UsrnameTBox.Size = new System.Drawing.Size(196, 20);
             this.UsrnameTBox.TabIndex = 3;
-            this.UsrnameTBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UsrnameTBox_MouseClick);
             this.UsrnameTBox.TextChanged += new System.EventHandler(this.UsrnameTBox_TextChanged);
-            this.UsrnameTBox.Enter += new System.EventHandler(this.UsrnameTBox_Enter);
-            this.UsrnameTBox.Leave += new System.EventHandler(this.UsrnameTBox_Leave);
             // 
             // PasswrdLabel
             // 
@@ -136,9 +126,6 @@
             this.PasswrdTBox.Name = "PasswrdTBox";
             this.PasswrdTBox.Size = new System.Drawing.Size(196, 20);
             this.PasswrdTBox.TabIndex = 8;
-            this.PasswrdTBox.TextChanged += new System.EventHandler(this.PasswrdTBox_TextChanged);
-            this.PasswrdTBox.Enter += new System.EventHandler(this.PasswrdTBox_Enter);
-            this.PasswrdTBox.Leave += new System.EventHandler(this.PasswrdTBox_Leave);
             // 
             // ServiceTBox
             // 
@@ -146,9 +133,6 @@
             this.ServiceTBox.Name = "ServiceTBox";
             this.ServiceTBox.Size = new System.Drawing.Size(196, 20);
             this.ServiceTBox.TabIndex = 9;
-            this.ServiceTBox.TextChanged += new System.EventHandler(this.ServiceTBox_TextChanged);
-            this.ServiceTBox.Enter += new System.EventHandler(this.ServiceTBox_Enter);
-            this.ServiceTBox.Leave += new System.EventHandler(this.ServiceTBox_Leave);
             // 
             // EmailTBox
             // 
@@ -156,9 +140,6 @@
             this.EmailTBox.Name = "EmailTBox";
             this.EmailTBox.Size = new System.Drawing.Size(196, 20);
             this.EmailTBox.TabIndex = 10;
-            this.EmailTBox.TextChanged += new System.EventHandler(this.EmailTBox_TextChanged);
-            this.EmailTBox.Enter += new System.EventHandler(this.EmailTBox_Enter);
-            this.EmailTBox.Leave += new System.EventHandler(this.EmailTBox_Leave);
             // 
             // PNumberTBox
             // 
@@ -166,9 +147,6 @@
             this.PNumberTBox.Name = "PNumberTBox";
             this.PNumberTBox.Size = new System.Drawing.Size(196, 20);
             this.PNumberTBox.TabIndex = 11;
-            this.PNumberTBox.TextChanged += new System.EventHandler(this.PNumberTBox_TextChanged);
-            this.PNumberTBox.Enter += new System.EventHandler(this.PNumberTBox_Enter);
-            this.PNumberTBox.Leave += new System.EventHandler(this.PNumberTBox_Leave);
             // 
             // ServiceLabel
             // 
@@ -210,84 +188,13 @@
             // 
             this.tableTableAdapter.ClearBeforeFill = true;
             // 
-            // UsernameWarningLabel
-            // 
-            this.UsernameWarningLabel.Location = new System.Drawing.Point(0, 0);
-            this.UsernameWarningLabel.Name = "UsernameWarningLabel";
-            this.UsernameWarningLabel.Size = new System.Drawing.Size(100, 23);
-            this.UsernameWarningLabel.TabIndex = 16;
-            // 
-            // UsernameWarningText
-            // 
-            this.UsernameWarningText.AutoSize = true;
-            this.UsernameWarningText.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.UsernameWarningText.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.UsernameWarningText.ForeColor = System.Drawing.Color.Red;
-            this.UsernameWarningText.Location = new System.Drawing.Point(348, 67);
-            this.UsernameWarningText.Name = "UsernameWarningText";
-            this.UsernameWarningText.Size = new System.Drawing.Size(35, 13);
-            this.UsernameWarningText.TabIndex = 15;
-            this.UsernameWarningText.Text = "label1";
-            this.UsernameWarningText.Visible = false;
-            this.UsernameWarningText.Click += new System.EventHandler(this.UsernameWarningText_Click);
-            // 
-            // ClickToSeePassword
-            // 
-            this.ClickToSeePassword.AutoSize = true;
-            this.ClickToSeePassword.ForeColor = System.Drawing.Color.Red;
-            this.ClickToSeePassword.Location = new System.Drawing.Point(348, 109);
-            this.ClickToSeePassword.Name = "ClickToSeePassword";
-            this.ClickToSeePassword.Size = new System.Drawing.Size(62, 13);
-            this.ClickToSeePassword.TabIndex = 17;
-            this.ClickToSeePassword.Text = "ClickToSee";
-            this.ClickToSeePassword.Visible = false;
-            this.ClickToSeePassword.Click += new System.EventHandler(this.ClickToSeePassword_Click);
-            // 
-            // ServiceWarningText
-            // 
-            this.ServiceWarningText.AutoSize = true;
-            this.ServiceWarningText.ForeColor = System.Drawing.Color.Red;
-            this.ServiceWarningText.Location = new System.Drawing.Point(348, 147);
-            this.ServiceWarningText.Name = "ServiceWarningText";
-            this.ServiceWarningText.Size = new System.Drawing.Size(35, 13);
-            this.ServiceWarningText.TabIndex = 18;
-            this.ServiceWarningText.Text = "label1";
-            this.ServiceWarningText.Visible = false;
-            // 
-            // EmailWarningText
-            // 
-            this.EmailWarningText.AutoSize = true;
-            this.EmailWarningText.ForeColor = System.Drawing.Color.Red;
-            this.EmailWarningText.Location = new System.Drawing.Point(348, 188);
-            this.EmailWarningText.Name = "EmailWarningText";
-            this.EmailWarningText.Size = new System.Drawing.Size(35, 13);
-            this.EmailWarningText.TabIndex = 19;
-            this.EmailWarningText.Text = "label1";
-            this.EmailWarningText.Visible = false;
-            // 
-            // PNumberWarningText
-            // 
-            this.PNumberWarningText.AutoSize = true;
-            this.PNumberWarningText.Location = new System.Drawing.Point(348, 222);
-            this.PNumberWarningText.Name = "PNumberWarningText";
-            this.PNumberWarningText.Size = new System.Drawing.Size(35, 13);
-            this.PNumberWarningText.TabIndex = 20;
-            this.PNumberWarningText.Text = "label1";
-            this.PNumberWarningText.Visible = false;
-            // 
             // AddNewAccForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Hush.Properties.Resources.ws_Minimal_Gray_to_White_Gradient_1920x1200;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(612, 331);
-            this.Controls.Add(this.PNumberWarningText);
-            this.Controls.Add(this.EmailWarningText);
-            this.Controls.Add(this.ServiceWarningText);
-            this.Controls.Add(this.ClickToSeePassword);
-            this.Controls.Add(this.UsernameWarningText);
-            this.Controls.Add(this.UsernameWarningLabel);
+            this.ClientSize = new System.Drawing.Size(409, 331);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.ServiceLabel);
             this.Controls.Add(this.PNumberTBox);
@@ -329,11 +236,5 @@
         private HushDatabaseDataSet hushDatabaseDataSet;
         private System.Windows.Forms.BindingSource tableBindingSource;
         private HushDatabaseDataSetTableAdapters.TableTableAdapter tableTableAdapter;
-        private System.Windows.Forms.Label UsernameWarningLabel;
-        private System.Windows.Forms.Label UsernameWarningText;
-        private System.Windows.Forms.Label ClickToSeePassword;
-        private System.Windows.Forms.Label ServiceWarningText;
-        private System.Windows.Forms.Label EmailWarningText;
-        private System.Windows.Forms.Label PNumberWarningText;
     }
 }

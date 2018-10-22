@@ -171,7 +171,6 @@
             this.UsrnameTBox.Name = "UsrnameTBox";
             this.UsrnameTBox.Size = new System.Drawing.Size(194, 20);
             this.UsrnameTBox.TabIndex = 14;
-            this.UsrnameTBox.TextChanged += new System.EventHandler(this.UsrnameTBox_TextChanged);
             // 
             // EditAccountInfoForm
             // 

@@ -45,6 +45,8 @@
             this.testEditForm = new System.Windows.Forms.Button();
             this.tableTableAdapter = new Hush.HushDatabaseDataSetTableAdapters.TableTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.searchTBox = new System.Windows.Forms.TextBox();
+            this.searchUsrnameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hushDatabaseDataSet)).BeginInit();
@@ -64,10 +66,10 @@
             this.phoneNumberDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tableBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView1.Location = new System.Drawing.Point(152, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(152, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(669, 310);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -123,9 +125,9 @@
             this.AddNewBtn.BackColor = System.Drawing.Color.Lavender;
             this.AddNewBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.AddNewBtn.Location = new System.Drawing.Point(152, 364);
+            this.AddNewBtn.Location = new System.Drawing.Point(435, 57);
             this.AddNewBtn.Name = "AddNewBtn";
-            this.AddNewBtn.Size = new System.Drawing.Size(143, 40);
+            this.AddNewBtn.Size = new System.Drawing.Size(119, 31);
             this.AddNewBtn.TabIndex = 2;
             this.AddNewBtn.Text = "Add";
             this.AddNewBtn.UseVisualStyleBackColor = false;
@@ -136,7 +138,7 @@
             this.ChangePINBtn.BackColor = System.Drawing.Color.Lavender;
             this.ChangePINBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangePINBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ChangePINBtn.Location = new System.Drawing.Point(25, 48);
+            this.ChangePINBtn.Location = new System.Drawing.Point(25, 93);
             this.ChangePINBtn.Name = "ChangePINBtn";
             this.ChangePINBtn.Size = new System.Drawing.Size(121, 81);
             this.ChangePINBtn.TabIndex = 3;
@@ -149,7 +151,7 @@
             this.LockAppBtn.BackColor = System.Drawing.Color.Lavender;
             this.LockAppBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LockAppBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.LockAppBtn.Location = new System.Drawing.Point(25, 135);
+            this.LockAppBtn.Location = new System.Drawing.Point(25, 180);
             this.LockAppBtn.Name = "LockAppBtn";
             this.LockAppBtn.Size = new System.Drawing.Size(121, 81);
             this.LockAppBtn.TabIndex = 4;
@@ -162,9 +164,9 @@
             this.testEditForm.BackColor = System.Drawing.Color.Lavender;
             this.testEditForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testEditForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.testEditForm.Location = new System.Drawing.Point(301, 364);
+            this.testEditForm.Location = new System.Drawing.Point(560, 57);
             this.testEditForm.Name = "testEditForm";
-            this.testEditForm.Size = new System.Drawing.Size(143, 40);
+            this.testEditForm.Size = new System.Drawing.Size(126, 31);
             this.testEditForm.TabIndex = 5;
             this.testEditForm.Text = "Update";
             this.testEditForm.UseVisualStyleBackColor = false;
@@ -179,13 +181,34 @@
             this.button1.BackColor = System.Drawing.Color.Lavender;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.Location = new System.Drawing.Point(450, 364);
+            this.button1.Location = new System.Drawing.Point(692, 57);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 40);
+            this.button1.Size = new System.Drawing.Size(129, 31);
             this.button1.TabIndex = 6;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.deletebutton1_Click);
+            // 
+            // searchTBox
+            // 
+            this.searchTBox.Location = new System.Drawing.Point(274, 63);
+            this.searchTBox.Name = "searchTBox";
+            this.searchTBox.Size = new System.Drawing.Size(144, 20);
+            this.searchTBox.TabIndex = 14;
+            this.searchTBox.TextChanged += new System.EventHandler(this.searchTBox_TextChanged);
+            // 
+            // searchUsrnameLabel
+            // 
+            this.searchUsrnameLabel.AutoSize = true;
+            this.searchUsrnameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.searchUsrnameLabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchUsrnameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.searchUsrnameLabel.Location = new System.Drawing.Point(153, 64);
+            this.searchUsrnameLabel.Name = "searchUsrnameLabel";
+            this.searchUsrnameLabel.Size = new System.Drawing.Size(119, 17);
+            this.searchUsrnameLabel.TabIndex = 15;
+            this.searchUsrnameLabel.Text = "Search by Username";
+            this.searchUsrnameLabel.Click += new System.EventHandler(this.SearchUserLabel_Click);
             // 
             // Form1
             // 
@@ -194,7 +217,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Hush.Properties.Resources.ws_Minimal_Gray_to_White_Gradient_1920x1200;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(831, 450);
+            this.ClientSize = new System.Drawing.Size(876, 452);
+            this.Controls.Add(this.searchUsrnameLabel);
+            this.Controls.Add(this.searchTBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.testEditForm);
@@ -213,6 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hushDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -232,6 +258,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox searchTBox;
+        private System.Windows.Forms.Label searchUsrnameLabel;
     }
 }
 

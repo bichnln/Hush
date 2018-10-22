@@ -25,7 +25,7 @@ namespace Hush
             // TODO: This line of code loads data into the 'hushDatabaseDataSet.Table' table. You can move, or remove it, as needed.
             this.tableTableAdapter.Fill(this.hushDatabaseDataSet.Table);
 
-            this.dataGridView1.Columns[2].DefaultCellStyle.ForeColor = Color.White;
+
 
         }
 
@@ -48,13 +48,11 @@ namespace Hush
             if (f.DialogResult == DialogResult.OK)
             {
                 //create a new connection to database
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Violet\Documents\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
 
                 //calculate the ID for the record to be saved
                 int nextID = tableBindingSource.Count + 1;
 
-                
-                
                 //INSERT SQL Command, used to insert data to database
                 SqlCommand cmd = new SqlCommand("INSERT INTO [Table] VALUES ('" + nextID + "','" + f.Username + "','" + f.Password + "','" + f.Service + "','" + f.Email + "','" + f.PhoneNumber + "')");
 
@@ -62,14 +60,12 @@ namespace Hush
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                
-                
+
                 //update the table displayed in dataGridView
                 SqlDataAdapter adapter = new SqlDataAdapter(@"SELECT * FROM [Table]", con);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-
             }   
         }
 
@@ -93,7 +89,7 @@ namespace Hush
                 if (editingForm.DialogResult == DialogResult.OK)
                 {
                     //create a new connection to database
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Violet\Documents\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
 
                     //INSERT SQL Command, used to insert data to database
                     SqlCommand cmd;
@@ -135,7 +131,7 @@ namespace Hush
             //check for comfirmation
             if(MessageBox.Show("Are you sure?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Violet\Documents\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
@@ -154,6 +150,25 @@ namespace Hush
             {
                 MessageBox.Show("Deletion has been cancelled.", "Deletion Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void searchTBox_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Violet\Documents\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(@"SELECT * FROM [Table] where Username like '" + searchTBox.Text + "%'", con);
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+
+            
+
+        }
+
+        private void SearchUserLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
