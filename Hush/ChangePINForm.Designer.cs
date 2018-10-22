@@ -79,6 +79,7 @@
             this.OldPassTextBox.Size = new System.Drawing.Size(161, 20);
             this.OldPassTextBox.TabIndex = 19;
             this.OldPassTextBox.UseSystemPasswordChar = true;
+            this.OldPassTextBox.TextChanged += new System.EventHandler(this.OldPassTextBox_TextChanged);
             // 
             // SaveBtn
             // 

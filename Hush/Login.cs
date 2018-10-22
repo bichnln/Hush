@@ -30,7 +30,7 @@ namespace Hush
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Violet\Documents\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
             SqlDataAdapter adt = new SqlDataAdapter("SELECT COUNT(*) FROM [PASSWORD] WHERE Password = '" + PassTextBox.Text + "'", con);
             DataTable data = new DataTable();
             adt.Fill(data);
