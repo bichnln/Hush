@@ -14,7 +14,7 @@ namespace Hush
     public partial class AddNewAccForm : Form
     {
         const int TBOX_MAXLENGTH = 50;
-        const int PNUMBER_TBOX_MAXLENGTH = 20;
+        const int PNUMBER_TBOX_MAXLENGTH = 14;
         private string _username, _password, _service, _email, _phonenumber;
         public AddNewAccForm()
         {
@@ -159,7 +159,7 @@ namespace Hush
 
         private void PNumberTBox_Enter(object sender, EventArgs e)
         {
-            PNumberWarning.Text = "No letters or special characters should be inlcuded";
+            PNumberWarning.Text = "Enter Phone Number in this format: +00 0000000000";
             TextBoxOnFocus(PNumberTBox, PNumberWarning);
         }
 
@@ -288,7 +288,7 @@ namespace Hush
         }
         private bool IsValidPhoneNumber(string number)
         {
-            Regex phoneNumberPattern = new Regex(@"[0-9]{10}");
+            Regex phoneNumberPattern = new Regex(@"^[\+]{1}[0-9]{2}[\ ]{1}[0-9]{10}$");
             if (phoneNumberPattern.IsMatch(number))
             {
                 return true;
