@@ -73,6 +73,7 @@
             // 
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.UsernameLabel.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.UsernameLabel.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.UsernameLabel.Location = new System.Drawing.Point(82, 54);
@@ -135,9 +136,9 @@
             this.PNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.PNumberLabel.Location = new System.Drawing.Point(22, 196);
             this.PNumberLabel.Name = "PNumberLabel";
-            this.PNumberLabel.Size = new System.Drawing.Size(123, 17);
+            this.PNumberLabel.Size = new System.Drawing.Size(120, 17);
             this.PNumberLabel.TabIndex = 17;
-            this.PNumberLabel.Text = "New Phone Number ";
+            this.PNumberLabel.Text = "New Phone Number";
             // 
             // EmailLabel
             // 
@@ -147,9 +148,9 @@
             this.EmailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.EmailLabel.Location = new System.Drawing.Point(32, 161);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(113, 17);
+            this.EmailLabel.Size = new System.Drawing.Size(107, 17);
             this.EmailLabel.TabIndex = 16;
-            this.EmailLabel.Text = "Email Registeration";
+            this.EmailLabel.Text = "Email Registration";
             // 
             // PasswrdLabel
             // 
