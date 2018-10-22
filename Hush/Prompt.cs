@@ -48,7 +48,7 @@ namespace Hush
                 }
                 else
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\Hush-master\Hush-master\Hush\HushDatabase.mdf;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
                     SqlDataAdapter adt = new SqlDataAdapter("SELECT COUNT(*) FROM [TABLE] WHERE Id = '" + _id + "'", con);
                     DataTable data = new DataTable();
                     adt.Fill(data);

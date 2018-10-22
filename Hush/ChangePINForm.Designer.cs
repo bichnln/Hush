@@ -50,6 +50,7 @@
             this.OldPassLabel.Size = new System.Drawing.Size(106, 17);
             this.OldPassLabel.TabIndex = 0;
             this.OldPassLabel.Text = "Current Password";
+            this.OldPassLabel.Click += new System.EventHandler(this.OldPassLabel_Click);
             // 
             // PassLabel
             // 
@@ -79,6 +80,7 @@
             this.OldPassTextBox.Size = new System.Drawing.Size(161, 20);
             this.OldPassTextBox.TabIndex = 19;
             this.OldPassTextBox.UseSystemPasswordChar = true;
+            this.OldPassTextBox.TextChanged += new System.EventHandler(this.OldPassTextBox_TextChanged);
             // 
             // SaveBtn
             // 

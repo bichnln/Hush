@@ -57,6 +57,11 @@ namespace Hush
 
         }
 
+        private void UsrnameTBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void PasswrdTBox_TextChanged(object sender, EventArgs e)
         {
             

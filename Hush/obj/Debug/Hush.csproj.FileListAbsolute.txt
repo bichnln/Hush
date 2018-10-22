@@ -68,3 +68,5 @@ C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.csproj.GenerateResource.cache
 C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.csproj.CoreCompileInputs.cache
 C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.exe
 C:\Users\Violet\Documents\Hush\Hush\obj\Debug\Hush.pdb
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.Login.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.Prompt.resources

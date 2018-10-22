@@ -45,6 +45,11 @@
             this.hushDatabaseDataSet = new Hush.HushDatabaseDataSet();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter = new Hush.HushDatabaseDataSetTableAdapters.TableTableAdapter();
+            this.UsrnameWarning = new System.Windows.Forms.Label();
+            this.PasswordToggle = new System.Windows.Forms.Label();
+            this.ServiceWarning = new System.Windows.Forms.Label();
+            this.EmailWarning = new System.Windows.Forms.Label();
+            this.PNumberWarning = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hushDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +85,8 @@
             this.UsrnameTBox.Size = new System.Drawing.Size(196, 20);
             this.UsrnameTBox.TabIndex = 3;
             this.UsrnameTBox.TextChanged += new System.EventHandler(this.UsrnameTBox_TextChanged);
+            this.UsrnameTBox.Enter += new System.EventHandler(this.UsrnameTBox_Enter);
+            this.UsrnameTBox.Leave += new System.EventHandler(this.UsrnameTBox_Leave);
             // 
             // PasswrdLabel
             // 
@@ -126,6 +133,9 @@
             this.PasswrdTBox.Name = "PasswrdTBox";
             this.PasswrdTBox.Size = new System.Drawing.Size(196, 20);
             this.PasswrdTBox.TabIndex = 8;
+            this.PasswrdTBox.TextChanged += new System.EventHandler(this.PasswrdTBox_TextChanged);
+            this.PasswrdTBox.Enter += new System.EventHandler(this.PasswrdTBox_Enter);
+            this.PasswrdTBox.Leave += new System.EventHandler(this.PasswrdTBox_Leave);
             // 
             // ServiceTBox
             // 
@@ -133,6 +143,9 @@
             this.ServiceTBox.Name = "ServiceTBox";
             this.ServiceTBox.Size = new System.Drawing.Size(196, 20);
             this.ServiceTBox.TabIndex = 9;
+            this.ServiceTBox.TextChanged += new System.EventHandler(this.ServiceTBox_TextChanged);
+            this.ServiceTBox.Enter += new System.EventHandler(this.ServiceTBox_Enter);
+            this.ServiceTBox.Leave += new System.EventHandler(this.ServiceTBox_Leave);
             // 
             // EmailTBox
             // 
@@ -140,6 +153,9 @@
             this.EmailTBox.Name = "EmailTBox";
             this.EmailTBox.Size = new System.Drawing.Size(196, 20);
             this.EmailTBox.TabIndex = 10;
+            this.EmailTBox.TextChanged += new System.EventHandler(this.EmailTBox_TextChanged);
+            this.EmailTBox.Enter += new System.EventHandler(this.EmailTBox_Enter);
+            this.EmailTBox.Leave += new System.EventHandler(this.EmailTBox_Leave);
             // 
             // PNumberTBox
             // 
@@ -147,6 +163,9 @@
             this.PNumberTBox.Name = "PNumberTBox";
             this.PNumberTBox.Size = new System.Drawing.Size(196, 20);
             this.PNumberTBox.TabIndex = 11;
+            this.PNumberTBox.TextChanged += new System.EventHandler(this.PNumberTBox_TextChanged);
+            this.PNumberTBox.Enter += new System.EventHandler(this.PNumberTBox_Enter);
+            this.PNumberTBox.Leave += new System.EventHandler(this.PNumberTBox_Leave);
             // 
             // ServiceLabel
             // 
@@ -188,13 +207,76 @@
             // 
             this.tableTableAdapter.ClearBeforeFill = true;
             // 
+            // UsrnameWarning
+            // 
+            this.UsrnameWarning.AutoSize = true;
+            this.UsrnameWarning.Location = new System.Drawing.Point(360, 72);
+            this.UsrnameWarning.Name = "UsrnameWarning";
+            this.UsrnameWarning.Size = new System.Drawing.Size(35, 13);
+            this.UsrnameWarning.TabIndex = 14;
+            this.UsrnameWarning.Text = "label1";
+            this.UsrnameWarning.Visible = false;
+            this.UsrnameWarning.Click += new System.EventHandler(this.UsrnameWarning_Click);
+            // 
+            // PasswordToggle
+            // 
+            this.PasswordToggle.AutoSize = true;
+            this.PasswordToggle.ForeColor = System.Drawing.Color.Red;
+            this.PasswordToggle.Location = new System.Drawing.Point(360, 109);
+            this.PasswordToggle.Name = "PasswordToggle";
+            this.PasswordToggle.Size = new System.Drawing.Size(62, 13);
+            this.PasswordToggle.TabIndex = 18;
+            this.PasswordToggle.Text = "ClickToSee";
+            this.PasswordToggle.Visible = false;
+            this.PasswordToggle.Click += new System.EventHandler(this.PasswordToggle_Click);
+            // 
+            // ServiceWarning
+            // 
+            this.ServiceWarning.AutoSize = true;
+            this.ServiceWarning.ForeColor = System.Drawing.Color.Red;
+            this.ServiceWarning.Location = new System.Drawing.Point(360, 149);
+            this.ServiceWarning.Name = "ServiceWarning";
+            this.ServiceWarning.Size = new System.Drawing.Size(35, 13);
+            this.ServiceWarning.TabIndex = 19;
+            this.ServiceWarning.Text = "label1";
+            this.ServiceWarning.Visible = false;
+            this.ServiceWarning.Click += new System.EventHandler(this.ServiceWarning_Click);
+            // 
+            // EmailWarning
+            // 
+            this.EmailWarning.AutoSize = true;
+            this.EmailWarning.ForeColor = System.Drawing.Color.Red;
+            this.EmailWarning.Location = new System.Drawing.Point(360, 190);
+            this.EmailWarning.Name = "EmailWarning";
+            this.EmailWarning.Size = new System.Drawing.Size(35, 13);
+            this.EmailWarning.TabIndex = 20;
+            this.EmailWarning.Text = "label1";
+            this.EmailWarning.Visible = false;
+            this.EmailWarning.Click += new System.EventHandler(this.EmailWarning_Click);
+            // 
+            // PNumberWarning
+            // 
+            this.PNumberWarning.AutoSize = true;
+            this.PNumberWarning.Location = new System.Drawing.Point(360, 226);
+            this.PNumberWarning.Name = "PNumberWarning";
+            this.PNumberWarning.Size = new System.Drawing.Size(35, 13);
+            this.PNumberWarning.TabIndex = 21;
+            this.PNumberWarning.Text = "label1";
+            this.PNumberWarning.Visible = false;
+            this.PNumberWarning.Click += new System.EventHandler(this.PNumberWarning_Click);
+            // 
             // AddNewAccForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Hush.Properties.Resources.ws_Minimal_Gray_to_White_Gradient_1920x1200;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(409, 331);
+            this.ClientSize = new System.Drawing.Size(631, 331);
+            this.Controls.Add(this.PNumberWarning);
+            this.Controls.Add(this.EmailWarning);
+            this.Controls.Add(this.ServiceWarning);
+            this.Controls.Add(this.PasswordToggle);
+            this.Controls.Add(this.UsrnameWarning);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.ServiceLabel);
             this.Controls.Add(this.PNumberTBox);
@@ -236,5 +318,10 @@
         private HushDatabaseDataSet hushDatabaseDataSet;
         private System.Windows.Forms.BindingSource tableBindingSource;
         private HushDatabaseDataSetTableAdapters.TableTableAdapter tableTableAdapter;
+        private System.Windows.Forms.Label UsrnameWarning;
+        private System.Windows.Forms.Label PasswordToggle;
+        private System.Windows.Forms.Label ServiceWarning;
+        private System.Windows.Forms.Label EmailWarning;
+        private System.Windows.Forms.Label PNumberWarning;
     }
 }
