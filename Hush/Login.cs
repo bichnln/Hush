@@ -30,16 +30,19 @@ namespace Hush
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\GitHub\Hush\Hush\HushDatabase.mdf;Integrated Security=True");
             SqlDataAdapter adt = new SqlDataAdapter("SELECT COUNT(*) FROM [PASSWORD] WHERE Password = '" + PassTextBox.Text + "'", con);
             DataTable data = new DataTable();
             adt.Fill(data);
             if (data.Rows[0][0].ToString() == "0")
             {
-                MessageBox.Show("Wrong password!\n");
+                DialogResult = DialogResult.None;
+                WrongPasswordForm wrongPasswordForm = new WrongPasswordForm();
+                wrongPasswordForm.Show();
             }
             else
             {
+                DialogResult = DialogResult.OK;
                 this.Hide();
                 Form1 form1 = new Form1();
                 form1.Show();

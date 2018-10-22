@@ -122,6 +122,12 @@
     <Compile Include="ViewAccountForm.Designer.cs">
       <DependentUpon>ViewAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WrongPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WrongPasswordForm.designer.cs">
+      <DependentUpon>WrongPasswordForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNewAccForm.resx">
       <DependentUpon>AddNewAccForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewAccountForm.resx">
       <DependentUpon>ViewAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WrongPasswordForm.resx">
+      <DependentUpon>WrongPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".xsc">
       <DependentUpon>.xsd</DependentUpon>

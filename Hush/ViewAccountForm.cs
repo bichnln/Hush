@@ -21,5 +21,10 @@ namespace Hush
         {
             this.Close();
         }
+
+        private void ViewAccountForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

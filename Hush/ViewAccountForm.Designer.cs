@@ -71,6 +71,7 @@
             this.Controls.Add(this.DeleteBtn);
             this.Name = "ViewAccountForm";
             this.Text = "ViewAccountForm";
+            this.Load += new System.EventHandler(this.ViewAccountForm_Load);
             this.ResumeLayout(false);
 
         }
