@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewAccFormUnitTests.cs" />
     <Compile Include="EditAccountInfoFormUnitTests.cs" />
     <Compile Include="LoginUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

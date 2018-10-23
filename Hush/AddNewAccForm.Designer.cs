@@ -102,9 +102,9 @@
             this.EmailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.EmailLabel.Location = new System.Drawing.Point(20, 184);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(113, 17);
+            this.EmailLabel.Size = new System.Drawing.Size(107, 17);
             this.EmailLabel.TabIndex = 6;
-            this.EmailLabel.Text = "Email Registeration";
+            this.EmailLabel.Text = "Email Registration";
             this.EmailLabel.Click += new System.EventHandler(this.EmailLabel_Click);
             // 
             // PNumberLabel
@@ -115,9 +115,9 @@
             this.PNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.PNumberLabel.Location = new System.Drawing.Point(38, 220);
             this.PNumberLabel.Name = "PNumberLabel";
-            this.PNumberLabel.Size = new System.Drawing.Size(95, 17);
+            this.PNumberLabel.Size = new System.Drawing.Size(92, 17);
             this.PNumberLabel.TabIndex = 7;
-            this.PNumberLabel.Text = "Phone Number ";
+            this.PNumberLabel.Text = "Phone Number";
             this.PNumberLabel.Click += new System.EventHandler(this.PNumberLabel_Click);
             // 
             // PasswrdTBox
