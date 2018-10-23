@@ -70,12 +70,19 @@ namespace HushUnitTests
         }
 
         [Test]
-        public void TestCancleBtn()
+        public void TestCancelBtn()
         {
             ButtonTester cancelButton = new ButtonTester("CancelBtn");
             Assert.IsNotNull(cancelButton.Text);
             Assert.AreEqual("Cancel", cancelButton.Text);
         }
 
+        [Test]
+        public void TestClickCancelButton()
+        {
+            ButtonTester cancelButton = new ButtonTester("CancelBtn");
+            cancelButton.Click();
+            Assert.AreEqual(DialogResult.Cancel, _editAccountForm.DialogResult);
+        }
     }
 }
