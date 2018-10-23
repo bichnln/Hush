@@ -164,9 +164,6 @@ namespace Hush
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
-
-            
-
         }
 
         private void SearchUserLabel_Click(object sender, EventArgs e)

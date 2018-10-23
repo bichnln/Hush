@@ -24,7 +24,6 @@ namespace Hush
             EmailTBox.MaxLength = TBOX_MAXLENGTH;
             PNumberTBox.MaxLength = PNUMBER_TBOX_MAXLENGTH;
         }
-        
         public string Username
         {
             get { return _username; }
@@ -48,7 +47,6 @@ namespace Hush
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             string msg = "";
-            string txt;
             _username = UsrnameTBox.Text;
             _password = PasswrdTBox.Text;
             _service = ServiceTBox.Text;
@@ -58,40 +56,21 @@ namespace Hush
             DialogResult = DialogResult.None;
 
             //check if information entered valid
-            if (String.IsNullOrWhiteSpace(_username))
-            {
-                txt = "Please enter Username!\n";
-                msg += txt;
-                NoticceMessage(UsrnameWarning, txt);
-            }
-            if (String.IsNullOrWhiteSpace(_password))
-            {
-                txt = "Please enter Password!\n";
-                msg += txt;
-                NoticceMessage(PasswordToggle, txt);
-            }
-            if (String.IsNullOrWhiteSpace(_service))
-            {
-                txt = "Please enter Service!\n";
-                msg += txt;
-                NoticceMessage(ServiceWarning, txt);
-            }
-            
-            if ((!IsValidEmail(_email)) && (!String.IsNullOrWhiteSpace(_email)))
-            {
-                txt = "Email is invalid!\n";
-                msg += txt;
-                NoticceMessage(EmailWarning, txt);
-            }
-            if ((!String.IsNullOrWhiteSpace(_phonenumber)) && !(IsValidPhoneNumber(_phonenumber)))
-            {
-                txt = "Phone Number is invalid!\n";
-                msg += txt;
-                NoticceMessage(PNumberWarning, txt);
-            }
+                        
+            msg += Validation.EmptyCheck(_username, "Username");
+            msg += Validation.EmptyCheck(_password, "Password");
+            msg += Validation.EmptyCheck(_service, "Service");
+            msg += Validation.EmailCheck(_email);
+            msg += Validation.PhoneNumberCheck(_phonenumber);
+         
             if (msg != "")
             {
                 MessageBox.Show(msg);
+                HighlightTB(UsrnameTBox, UsrnameWarning);
+                HighlightTB(PasswrdTBox, PasswordToggle);
+                HighlightTB(ServiceTBox, ServiceWarning);
+                HighlightTB(EmailTBox, EmailWarning);
+                HighlightTB(PNumberTBox, PNumberWarning);
             }
 
             else
@@ -104,7 +83,6 @@ namespace Hush
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
-           
         }
 
         //LABEL Clicked
@@ -173,6 +151,8 @@ namespace Hush
         private void PasswrdTBox_Leave(object sender, EventArgs e)
         {
             ControlLeaveTextBox(PasswrdTBox, PasswordToggle);
+            PasswrdTBox.UseSystemPasswordChar = true;
+            PasswordToggle.Text = "Reveal Password";
         }
 
         private void ServiceTBox_Leave(object sender, EventArgs e)
@@ -206,7 +186,7 @@ namespace Hush
         }
         private void EmailTBox_TextChanged(object sender, EventArgs e)
         {
-            if (!IsValidEmail(EmailTBox.Text))
+            if (!Validation.IsValidEmail(EmailTBox.Text))
             {
                 EmailWarning.Text = "Email is invalid!";
                 EmailWarning.ForeColor = Color.Red;
@@ -219,7 +199,7 @@ namespace Hush
         }
         private void PNumberTBox_TextChanged(object sender, EventArgs e)
         {
-            if (!IsValidPhoneNumber(PNumberTBox.Text))
+            if (!Validation.IsValidPhoneNumber(PNumberTBox.Text))
             {
                 PNumberWarning.Text = "Wrong format!";
                 PNumberWarning.ForeColor = Color.Red;
@@ -273,28 +253,8 @@ namespace Hush
 
         }
 
-        //VALIDATION FUNCTIONS
-        private bool IsValidEmail(string email)
-        {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-        private bool IsValidPhoneNumber(string number)
-        {
-            Regex phoneNumberPattern = new Regex(@"^[\+]{1}[0-9]{2}[\ ]{1}[0-9]{10}$");
-            if (phoneNumberPattern.IsMatch(number))
-            {
-                return true;
-            }
-            else return false;
-        }
+        //Change TextBox and Labels appearances
+                
         private void TextBoxOnFocus(TextBox tb, Label label)
         {
             tb.Focus();
@@ -310,11 +270,12 @@ namespace Hush
             tb.BackColor = Color.White;
             label.Visible = false;
         }
-        private void NoticceMessage(Label label, string text)
+        private void HighlightTB(TextBox tb, Label label)
         {
             label.ForeColor = Color.Red;
-            label.Text = text;
+            label.Text = "*";
             label.Visible = true;
+            tb.BackColor = Color.Yellow;
         }
     }
 }
