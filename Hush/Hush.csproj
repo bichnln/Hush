@@ -116,6 +116,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Validation.cs" />
     <Compile Include="ViewAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -88,3 +88,6 @@ C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\GitHub\Hush\Hush\obj\Debu
 C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\GitHub\Hush\Hush\obj\Debug\Hush.exe
 C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\GitHub\Hush\Hush\obj\Debug\Hush.pdb
 C:\Users\TRAN QUANG LINH\Desktop\DP1 - Sem 2 2018\Hush\GitHub\Hush\Hush\obj\Debug\Hush.WrongPasswordForm.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.Login.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.Prompt.resources
+C:\Users\SAPPHIRE\DP1\Hush\Hush\Hush\obj\Debug\Hush.WrongPasswordForm.resources

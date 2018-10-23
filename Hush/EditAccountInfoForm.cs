@@ -38,10 +38,10 @@ namespace Hush
         {
             _newPass = PasswrdTBox.Text;
             _newPhoneNo = PNumberTBox.Text;
-
+            string msg = "";
             DialogResult = DialogResult.None;
 
-            if (_newPass == "")
+            /*if (_newPass == "")
             {
                 MessageBox.Show("Please enter new password!\n");
             }
@@ -49,7 +49,20 @@ namespace Hush
             {
                 MessageBox.Show("Account was successfully updated.\n");
                 DialogResult = DialogResult.OK;
+            }*/
+            msg += Validation.EmptyCheck(_newPass, "New Password");
+            msg += Validation.PhoneNumberCheck(_newPhoneNo);
+
+            if (msg != "")
+            {
+                MessageBox.Show(msg);
             }
+            else
+            {
+                MessageBox.Show("Accout was successfully updated.\n");
+                DialogResult = DialogResult.OK;
+            }
+            
         }
 
         private void PNumberTBox_TextChanged(object sender, EventArgs e)

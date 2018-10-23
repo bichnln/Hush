@@ -7,41 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 
 namespace Hush
 {
     public partial class AddNewAccForm : Form
     {
+        const int TBOX_MAXLENGTH = 50;
+        const int PNUMBER_TBOX_MAXLENGTH = 14;
+        private string _username, _password, _service, _email, _phonenumber;
         public AddNewAccForm()
         {
             InitializeComponent();
+            ServiceTBox.MaxLength = TBOX_MAXLENGTH;
+            UsrnameTBox.MaxLength = TBOX_MAXLENGTH;
+            EmailTBox.MaxLength = TBOX_MAXLENGTH;
+            PNumberTBox.MaxLength = PNUMBER_TBOX_MAXLENGTH;
         }
-        private string _username, _password, _service, _email, _phonenumber;
         public string Username
         {
             get { return _username; }
-            set { _username = value; }
         }
         public string Password
         {
             get { return _password; }
-            set { _password = value; }
         }
         public string Service
         {
             get { return _service; }
-            set { _service = value; }
         }
         public string Email
         {
             get { return _email; }
-            set { _email = value; }
         }
         public string PhoneNumber
         {
             get { return _phonenumber; }
-            set { _phonenumber = value; }
         }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
@@ -55,28 +56,23 @@ namespace Hush
             DialogResult = DialogResult.None;
 
             //check if information entered valid
-            if (_username.Length == 0)
-            {
-                msg += "Please enter Username!\n"; 
-                
-            }
-            if (_password.Length == 0)
-            {
-                msg += "Please enter Password!\n";
-            }
-            if (_service.Length == 0)
-            {
-                msg += "Please enter Service!\n";
-            }
-            if (IsValidEmail(_email) == false)
-            {
-                msg += "Email entered is not valid\n";
-            }
+
+            msg += Validation.EmptyCheck(_username, "Username");
+            msg += Validation.EmptyCheck(_password, "Password");
+            msg += Validation.EmptyCheck(_service, "Service");
+            msg += Validation.EmailCheck(_email);
+            msg += Validation.PhoneNumberCheck(_phonenumber);
 
             if (msg != "")
             {
                 MessageBox.Show(msg);
+                HighlightTB(UsrnameTBox, UsrnameWarning);
+                HighlightTB(PasswrdTBox, PasswordToggle);
+                HighlightTB(ServiceTBox, ServiceWarning);
+                HighlightTB(EmailTBox, EmailWarning);
+                HighlightTB(PNumberTBox, PNumberWarning);
             }
+
             else
             {
                 MessageBox.Show("Account Information added!");
@@ -87,35 +83,165 @@ namespace Hush
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
-           
         }
 
+        //LABEL Clicked
+        private void UsernameLabel_Click(object sender, EventArgs e)
+        {
+            UsrnameTBox.Focus();
+        }
         private void PasswrdLabel_Click(object sender, EventArgs e)
         {
-
+            PasswrdTBox.Focus();
+        }
+        private void ServiceLabel_Click(object sender, EventArgs e)
+        {
+            ServiceTBox.Focus();
+        }
+        private void EmailLabel_Click(object sender, EventArgs e)
+        {
+            EmailTBox.Focus();
+        }
+        private void PNumberLabel_Click(object sender, EventArgs e)
+        {
+            PNumberTBox.Focus();
         }
 
+        //TEXTBOX Entered
+        private void UsrnameTBox_Enter(object sender, EventArgs e)
+        {
+            UsrnameWarning.Text = "Username cannot exceed 50 characters";
+            TextBoxOnFocus(UsrnameTBox, UsrnameWarning);
+        }
+
+        private void PasswrdTBox_Enter(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(PasswrdTBox.Text))
+            {
+                this.PasswordToggle.Text = "";
+            }
+            TextBoxOnFocus(PasswrdTBox, PasswordToggle);
+        }
+
+        private void ServiceTBox_Enter(object sender, EventArgs e)
+        {
+            ServiceWarning.Text = "Service name cannot exceed 50 characters";
+            TextBoxOnFocus(ServiceTBox, ServiceWarning);
+        }
+
+        private void EmailTBox_Enter(object sender, EventArgs e)
+        {
+            EmailWarning.Text = "Email cannot exceed 50 characters";
+            TextBoxOnFocus(EmailTBox, EmailWarning);
+        }
+
+        private void PNumberTBox_Enter(object sender, EventArgs e)
+        {
+            PNumberWarning.Text = "Phone number should not exceeds 17 characters!";
+            TextBoxOnFocus(PNumberTBox, PNumberWarning);
+        }
+
+        //TEXTBOX Leave
+
+        private void UsrnameTBox_Leave(object sender, EventArgs e)
+        {
+            ControlLeaveTextBox(UsrnameTBox, UsrnameWarning);
+        }
+
+        private void PasswrdTBox_Leave(object sender, EventArgs e)
+        {
+            ControlLeaveTextBox(PasswrdTBox, PasswordToggle);
+            PasswrdTBox.UseSystemPasswordChar = true;
+            PasswordToggle.Text = "Reveal Password";
+        }
+
+        private void ServiceTBox_Leave(object sender, EventArgs e)
+        {
+            ControlLeaveTextBox(ServiceTBox, ServiceWarning);
+        }
+
+        private void EmailTBox_Leave(object sender, EventArgs e)
+        {
+            ControlLeaveTextBox(EmailTBox, EmailWarning);
+        }
+
+        private void PNumberTBox_Leave(object sender, EventArgs e)
+        {
+            ControlLeaveTextBox(PNumberTBox, PNumberWarning);
+        }
+
+        //TEXTBOX Text Changed
         private void UsrnameTBox_TextChanged(object sender, EventArgs e)
         {
 
         }
+        private void PasswrdTBox_TextChanged(object sender, EventArgs e)
+        {
+            PasswrdTBox.UseSystemPasswordChar = true;
+            PasswordToggle.Text = "Reveal Password";
+        }
+        private void ServiceTBox_TextChanged(object sender, EventArgs e)
+        {
 
-        private void EmailLabel_Click(object sender, EventArgs e)
+        }
+        private void EmailTBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!Validation.IsValidEmail(EmailTBox.Text))
+            {
+                EmailWarning.Text = "Email is invalid!";
+                EmailWarning.ForeColor = Color.Red;
+            }
+            else
+            {
+                EmailWarning.Text = "Email must not exceed 50 characters";
+                EmailWarning.ForeColor = Color.Blue;
+            }
+        }
+        private void PNumberTBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!Validation.IsValidPhoneNumber(PNumberTBox.Text))
+            {
+                PNumberWarning.Text = "Wrong format!";
+                PNumberWarning.ForeColor = Color.Red;
+                PNumberWarning.Visible = true;
+            }
+            else
+            {
+                PNumberWarning.Visible = false;
+            }
+        }
+
+        //WARNING TEXT Clicked Events
+        private void UsrnameWarning_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void PNumberLabel_Click(object sender, EventArgs e)
+        private void PasswordToggle_Click(object sender, EventArgs e)
+        {
+            if ((PasswrdTBox.UseSystemPasswordChar == true))
+            {
+                PasswrdTBox.UseSystemPasswordChar = false;
+                PasswordToggle.Text = "HIDE Password";
+            }
+            else
+            {
+                PasswrdTBox.UseSystemPasswordChar = true;
+                PasswordToggle.Text = "Reveal Password";
+            }
+        }
+
+        private void ServiceWarning_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void UsernameLabel_Click(object sender, EventArgs e)
+        private void EmailWarning_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void ServiceLabel_Click(object sender, EventArgs e)
+        private void PNumberWarning_Click(object sender, EventArgs e)
         {
 
         }
@@ -127,17 +253,29 @@ namespace Hush
 
         }
 
-        private bool IsValidEmail(string email)
+        //Change TextBox and Labels appearances
+
+        private void TextBoxOnFocus(TextBox tb, Label label)
         {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
+            tb.Focus();
+            tb.BackColor = Color.LightGray;
+            tb.ForeColor = Color.Blue;
+
+            label.ForeColor = Color.Green;
+            label.Visible = true;
+
+        }
+        private void ControlLeaveTextBox(TextBox tb, Label label)
+        {
+            tb.BackColor = Color.White;
+            label.Visible = false;
+        }
+        private void HighlightTB(TextBox tb, Label label)
+        {
+            label.ForeColor = Color.Red;
+            label.Text = "*";
+            label.Visible = true;
+            tb.BackColor = Color.Yellow;
         }
     }
 }
